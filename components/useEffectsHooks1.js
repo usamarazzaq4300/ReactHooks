@@ -5,7 +5,7 @@ function USeEffectsHooks1() {
         setCounter(counter+1)
     }
     useEffect(() => {
-        console.log("component Update")
+        console.log("component Update >> ComponentDidUpdate after state updates")
     })
     return (
         <div>

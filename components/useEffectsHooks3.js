@@ -1,6 +1,6 @@
-// Conditionally run Effects
+//run Effects only once >> componentDidMount
 import { useState, useEffect } from "react"
-function USeEffectsHooks2() {
+function USeEffectsHooks3() {
     const [counter, setCounter] = useState(0)
     const [name, setName] = useState("")
     const Counting = () => {
@@ -10,8 +10,8 @@ function USeEffectsHooks2() {
         setName(e.target.value)
     }
     useEffect(() => {
-        console.log("component Update")
-    }, [counter])
+        console.log("componentDidMount run only once")
+    }, [])
     return (
         <div>
             <h1>React Hooks</h1>
@@ -21,4 +21,4 @@ function USeEffectsHooks2() {
         </div>
     )
 }
-export default USeEffectsHooks2
+export default USeEffectsHooks3
